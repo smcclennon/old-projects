@@ -33,8 +33,8 @@ if not exist "%programname%\" mkdir "%programname%"
 set savedir=%programname%\bin\
 if not exist "%savedir%\" mkdir "%savedir%"
 if not exist "%savedir%logging.dat" @echo disabled> "%savedir%logging.dat"
-if not exist "%programname%\README.txt" @echo Deleting files (and/or) changing values inside them may cause %programname% to stop working correctly. If this happens, delete the %programname% folder and fresh files will be generated. It is not recommended to delete the %programname% folder or any files within while %programname% is running. > "%programname%\README.txt"
-if not exist "%savedir%README.txt" @echo Deleting files (and/or) changing values inside them may cause %programname% to stop working correctly. If this happens, delete the %programname% folder and fresh files will be generated. It is not recommended to delete the %programname% folder or any files within while %programname% is running. > "%savedir%README.txt"
+if not exist "%programname%\README.txt" @echo "Deleting files (and/or) changing values inside them may cause %programname% to stop working correctly. If this happens, delete the %programname% folder and fresh files will be generated. It is not recommended to delete the %programname% folder or any files within while %programname% is running." > "%programname%\README.txt"
+if not exist "%savedir%README.txt" @echo "Deleting files (and/or) changing values inside them may cause %programname% to stop working correctly. If this happens, delete the %programname% folder and fresh files will be generated. It is not recommended to delete the %programname% folder or any files within while %programname% is running." > "%savedir%README.txt"
 find "enabled" "%savedir%logging.dat" >nul
 if %errorlevel%==0 ( set "logging=enabled" ) else ( set "logging=disabled" )
 if not exist "%programname%\Our Website.txt" @echo Official Website: %website% > "%programname%\Our Website.txt"
