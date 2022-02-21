@@ -160,7 +160,7 @@ echo                  *          7. Info                                        
 echo                  *          8. ===Our Website: Download Latest Version / Send Bug Report===    *
 echo                  *          9. Next Page                                                       *
 echo                  *******************************************************************************
-CHOICE>nul /C 123456789
+CHOICE>nul /C:123456789
 IF ERRORLEVEL 9 GOTO main2
 IF ERRORLEVEL 8 start %website% & goto main
 IF ERRORLEVEL 7 GOTO info
@@ -211,7 +211,7 @@ echo                  *          7. Reload                                      
 echo                  *          8. Previous Page                                                   *
 echo                  *          9. Next Page                                                       *
 echo                  *******************************************************************************
-CHOICE>nul /C 123456789
+CHOICE>nul /C:123456789
 IF ERRORLEVEL 9 GOTO main2
 IF ERRORLEVEL 8 GOTO main
 IF ERRORLEVEL 7 GOTO reload
@@ -312,7 +312,7 @@ if %programcolor% == %cgreen% echo                  *                        Cur
 if %programcolor% == %ccyan% echo                  *                        Currently Selected: Cyan                             *
 if %programcolor% == %cpink% echo                  *                        Currently Selected: Pink                             *
 echo                  *******************************************************************************
-CHOICE>nul /C 1234567
+CHOICE>nul /C:1234567
 IF ERRORLEVEL 7 GOTO main2
 IF ERRORLEVEL 6 @echo pink> "%savedir%colour.dat" & goto colorsreload
 IF ERRORLEVEL 5 @echo cyan> "%savedir%colour.dat" & goto colorsreload
@@ -428,7 +428,7 @@ echo                  **********************************************************
 echo                  *          1. Return to the Main Menu                                         *
 echo                  *          2. Advanced Network Reset                                          *
 echo                  *******************************************************************************
-CHOICE>nul /C 12
+CHOICE>nul /C:12
 IF ERRORLEVEL 2 GOTO fix_internet2
 IF ERRORLEVEL 1 GOTO main
 
@@ -480,7 +480,7 @@ echo                  *              Restart required to apply changes. Restart 
 echo                  *          1. Restart now                                                     *
 echo                  *          2. Restart in 5 minutes                                            *
 echo                  *******************************************************************************
-CHOICE>nul /C 12
+CHOICE>nul /C:12
 IF ERRORLEVEL 2 GOTO restart_5min
 IF ERRORLEVEL 1 GOTO restart_now
 
@@ -569,7 +569,7 @@ echo                  *     This will close all currently open folders. Unsaved 
 echo                  *          1. Continue                                                        *
 echo                  *          2. Cancel                                                          *
 echo                  *******************************************************************************
-CHOICE>nul /C 12
+CHOICE>nul /C:12
 IF ERRORLEVEL 2 GOTO :main
 IF ERRORLEVEL 1 GOTO fix_explorer1
 :fix_explorer1
@@ -638,7 +638,7 @@ echo                  *          2. D Drive                                     
 echo                  *          3. All Drives                                                      *
 echo                  *          4. Cancel                                                          *
 echo                  *******************************************************************************
-CHOICE>nul /C 1234
+CHOICE>nul /C:1234
 IF ERRORLEVEL 4 GOTO main
 IF ERRORLEVEL 3 GOTO verify_disk1all
 IF ERRORLEVEL 2 GOTO verify_disk1D
@@ -857,7 +857,7 @@ echo                  *          2. D Drive                                     
 echo                  *          3. All Drives                                                      *
 echo                  *          4. Cancel                                                          *
 echo                  *******************************************************************************
-CHOICE>nul /C 1234
+CHOICE>nul /C:1234
 IF ERRORLEVEL 4 GOTO main
 IF ERRORLEVEL 3 GOTO defrag1all
 IF ERRORLEVEL 2 GOTO defrag1D
@@ -985,7 +985,7 @@ echo                  *          3. Display Settings                            
 echo                  *          4. Graphics Diagnostics                                            *
 echo                  *          5. Return to the Main Menu                                         *
 echo                  *******************************************************************************
-CHOICE>nul /C 12345
+CHOICE>nul /C:12345
 IF ERRORLEVEL 5 GOTO main
 IF ERRORLEVEL 4 GOTO expro4
 IF ERRORLEVEL 3 GOTO expro3
@@ -1085,7 +1085,7 @@ echo                  *          1. Generate Fresh Config                       
 echo                  *          2. Restart                                                         *
 echo                  *          3. Exit                                                            *
 echo                  *******************************************************************************
-CHOICE>nul /C 123
+CHOICE>nul /C:123
 IF ERRORLEVEL 3 exit
 IF ERRORLEVEL 2 GOTO reload
 IF ERRORLEVEL 1 rd /S /Q "%programname%" & goto reload
