@@ -77,42 +77,42 @@ echo                                *--------*                             **---
 ::Loading Tasks
 
 if not exist "%savedir%colour.dat" @echo blue> "%savedir%colour.dat"
-find /c "blue" "%savedir%colour.dat">nul
+find "blue" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto colourcheckwhite
 ) else (
 set programcolor=%cblue% & goto colourchecknext
 )
 :colourcheckwhite
-find /c "white" "%savedir%colour.dat">nul
+find "white" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto colourcheckred
 ) else (
 set programcolor=%cblack% & goto colourchecknext
 )
 :colourcheckred
-find /c "red" "%savedir%colour.dat">nul
+find "red" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto colourcheckcyan
 ) else (
 set programcolor=%cred% & goto colourchecknext
 )
 :colourcheckcyan
-find /c "cyan" "%savedir%colour.dat">nul
+find "cyan" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto colourcheckgreen
 ) else (
 set programcolor=%ccyan% & goto colourchecknext
 )
 :colourcheckgreen
-find /c "green" "%savedir%colour.dat">nul
+find "green" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto colourcheckpink
 ) else (
 set programcolor=%cgreen% & goto colourchecknext
 )
 :colourcheckpink
-find /c "pink" "%savedir%colour.dat">nul
+find "pink" "%savedir%colour.dat">nul
 if %errorlevel% equ 1 (
     goto criticalerror
 ) else (
