@@ -20,7 +20,7 @@ The [original code](Windows%20Optimiser%204.4.bat) for Windows Optimiser did not
 Whilst Windows Optimiser does work, it was written very poorly and will not be recieving any updates.
 
 ## Usage
-Right click [this](https://raw.githubusercontent.com/smcclennon/old-projects/master/windows_batch/Windows%20Optimiser%204.4%20(patched).bat) and "Save link as". Ensure the file saves with the `.bat` file extension. You may need to enable viewing file extensions under "View" in file explorer.
+Right click [this](https://raw.githubusercontent.com/smcclennon/old-projects/master/windows_optimiser/Windows%20Optimiser%204.4%20(patched).bat) and "Save link as". Ensure the file saves with the `.bat` file extension. You may need to enable viewing file extensions under "View" in file explorer.
 
 If a security warning prevents you from doing so, you can also copy/paste the code in to a `.bat` file manually and run that instead.
 
