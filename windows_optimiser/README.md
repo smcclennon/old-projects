@@ -30,8 +30,6 @@ If a security warning prevents you from doing so, you can also copy/paste the co
 #### Program: Fix networking
 ![image](https://user-images.githubusercontent.com/24913281/155040216-a2597563-10d6-4b7a-89ff-89acb7e7bd54.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040224-52e6901f-b2a6-4d33-8435-e2075f10f13c.png)
-
-
 ![image](https://user-images.githubusercontent.com/24913281/155040251-0de7ae0a-8ea9-49d0-9def-0901a93fb4c1.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040330-1c83ecf8-edc5-4abc-bd00-c7ee722c9ec4.png)
 #### Program: Fix slow desktop
@@ -47,7 +45,6 @@ If a security warning prevents you from doing so, you can also copy/paste the co
 #### Program: External tools
 ![image](https://user-images.githubusercontent.com/24913281/155040530-8656a890-a87f-4000-90ca-d87bf761d87f.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040517-adb445e6-b560-48e8-ae68-bf2e6727229a.png)
-![image](https://user-images.githubusercontent.com/24913281/155040538-18bb2ad3-8596-4c38-a8c8-8271e5dc2a7b.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040580-c3148214-be35-405d-b60a-affba1adc7af.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040587-792519a2-ceb1-4999-b088-f2e3a2060d1e.png)
 ![image](https://user-images.githubusercontent.com/24913281/155040596-8cf6c568-0098-4a05-a83d-c6e608767b24.png)
