@@ -1,5 +1,5 @@
 # Touchscreen Toggle - November 2019
-My college friends had a facination with dragging their fingers across my laptop touchscreen. I wasn't so keen, and thus Touchscreen Toggle (TST) was created, originally a script which toggled my touchscreen with a keyboard shortcut.
+My college friends had a fascination with dragging their fingers across my laptop touchscreen. I wasn't so keen, and thus Touchscreen Toggle (TST) was created, originally a script which toggled my touchscreen with a keyboard shortcut.
 
 This project was my first experience working with device drivers, and uses the Windows [devcon](https://github.com/Microsoft/Windows-driver-samples/tree/master/setup/devcon) utility to disable and re-enable a device driver.
 
@@ -35,15 +35,15 @@ It was working perfectly, and I was able to quickly disable my touchscreen to mi
 
 It became a guessing game knowing when my touch screen was enabled though, so to make my script even fancier I looked into generating Windows notifications from the command line.
 
-I found an [article](https://www.addictivetips.com/windows-tips/show-a-custom-toast-notification-on-windows-10/) showing how to achieve this in Powershell using the [BurntToast](https://github.com/Windos/BurntToast) module.
+I found an [article](https://www.addictivetips.com/windows-tips/show-a-custom-toast-notification-on-windows-10/) showing how to achieve this in PowerShell using the [BurntToast](https://github.com/Windos/BurntToast) module.
 
-My Powershell `ExecutionPolicy` was set to `Restricted` which does not allow installing any remote modules, so I had to first [change my ExecutionPolicy](https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6):
+My PowerShell `ExecutionPolicy` was set to `Restricted` which does not allow installing any remote modules, so I had to first [change my ExecutionPolicy](https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6):
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ``` 
 Next, I ran `Install-Module -Name BurntToast` to install BurntToast.
 
-Finally, I added my logo to [`C:\Windows\TST\image.png`](touchscreen_toggle/image.png)) and edited the driver toggle script to generate toast notifications with my logo as the icon using `powershell New-BurntToastNotification`:
+Finally, I added my logo to [`C:\Windows\TST\image.png`](touchscreen_toggle/image.png) and edited the driver toggle script to generate toast notifications with my logo as the icon using `powershell New-BurntToastNotification`:
 ```batch
 devcon status "HID\VEN_8086&DEV_9D3E&SUBSYS_00000000&REV_21&COL05*" | find /i "Driver is running.">nul
 if not %errorlevel%==1 (
@@ -55,7 +55,7 @@ if not %errorlevel%==1 (
 )
 ```
 
-## Powershell script
+## PowerShell script
 I noticed that the toast notifications took a couple of seconds to appear, and instead of a black command prompt box appearing and closing immediately when running my driver toggle script, it would stay open till the toast notification appeared.
 
 I also observed that running `powershell New-BurntToastNotification` from Command Prompt has the same delay, but running `New-BurntToastNotification` directly from PowerShell had no delay.
